@@ -1,0 +1,136 @@
+.footer__main {
+    padding-top: 140px;
+    padding-bottom: 160px;
+}
+
+.footer__extra {
+    padding-block: 15px;
+    background-color: var(--color-dark-header-footer);
+}
+
+.footer__header,
+.footer__body {
+    display: grid;
+    grid-template-columns: 20.77% auto;
+    column-gap: 62px;
+}
+
+.footer__body {
+
+    grid-template-columns: 20.77% repeat(3, 1fr);
+}
+
+.footer_description {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: var(--font-family-base);
+    font-size: 20px;
+    max-width: 930px;
+    text-align: left;
+}
+
+.footer__header:not(:last-child) {
+    margin-bottom: 60px;
+}
+
+.footer__column {
+    font-size: clamp(18ox 1.15vw, 22px);
+
+}
+
+.footer__column:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.footer__schedule:not(:last-child) {
+    margin-bottom: 13px;
+}
+
+.footer__adress:not(:last-child) {
+    margin-bottom: 35px;
+}
+
+.footer__column-title.has-arrow::after {
+    content: '';
+    display: inline-block;
+    height: 0.74em;
+    aspect-ratio: 1;
+    margin-left: 0.5em;
+    background: url('../image/arrowJoin.svg') center/contain no-repeat;
+    scale: -1 -1;
+
+}
+
+.footer__subsribe {
+    position: relative;
+}
+
+
+.footer__subsribe.input {
+    padding-right: 70px;
+}
+
+.footer__subsribe-button {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    background: url('../image/arrowmain.svg') center/contain no-repeat;
+    right: 0;
+    aspect-ratio: 1;
+    /* background-color: transparent; */
+    border: 1px solid var(--color-ligth);
+    border-radius: 50%;
+
+}
+
+.footer__subsribe-button:hover {
+    background-color: var(--color-ligth-gray);
+}
+
+.footer__subsribe:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.footer__soc1als-list {
+    display: flex;
+    column-gap: 18px;
+}
+
+.footer__soc1als-link {
+    display: flex;
+    width: 23px;
+    color: white;
+
+}
+
+@media(max-width: 1024px) {
+    .footer__main {
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+
+    .footer__body {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 15px;
+    }
+
+    .footer__header {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+}
+
+@media(max-width: 767px) {
+    .footer__body {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer__header:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    .footer__subsribe:not(:last-child) {
+        margin-bottom: 40px;
+    }
+}
